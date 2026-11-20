@@ -14,7 +14,7 @@ RUN npm run build
 # Stage 2: Hardened rootless NGINX runtime (UID 101)
 FROM nginxinc/nginx-unprivileged:1.27-alpine-slim
 
-USER root
+USER 0
 RUN apk upgrade --no-cache
 
 COPY nginx/nginx.conf /etc/nginx/conf.d/default.conf
@@ -25,4 +25,4 @@ USER 101:101
 EXPOSE 8080
 
 HEALTHCHECK --interval=30s --timeout=5s --start-period=10s --retries=3 \
-  CMD wget -q --spider http://127.0.0.1:8080/healthz || exit 1
+  CMD ["wget", "-q", "--spider", "http://127.0.0.1:8080/healthz"]
