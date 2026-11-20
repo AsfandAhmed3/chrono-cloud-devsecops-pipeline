@@ -59,7 +59,7 @@ describe('Chrono-Cloud Storefront', () => {
     await user.click(screen.getByTestId('vault-button'));
     const drawer = screen.getByTestId('vault-drawer');
     expect(within(drawer).getByText(/Aethelgard Sovereign Chronograph/i)).toBeInTheDocument();
-    expect(screen.getByTestId('vault-subtotal')).toHaveTextContent('$18,500');
+    expect(screen.getByTestId('vault-subtotal')).toHaveTextContent('$19,500');
   });
 
   it('opens the technical movement specification modal when Inspect Movement is clicked', async () => {
@@ -78,13 +78,13 @@ describe('Chrono-Cloud Storefront', () => {
     const user = userEvent.setup();
     render(<App />);
 
-    expect(screen.getByTestId('price-cc-01')).toHaveTextContent('$18,500');
+    expect(screen.getByTestId('price-cc-01')).toHaveTextContent('$19,500');
 
     const select = screen.getByTestId('currency-select');
     await user.selectOptions(select, 'CHF');
-    expect(screen.getByTestId('price-cc-01')).toHaveTextContent('CHF 16,280');
+    expect(screen.getByTestId('price-cc-01')).toHaveTextContent('CHF 17,160');
 
     await user.selectOptions(select, 'EUR');
-    expect(screen.getByTestId('price-cc-01')).toHaveTextContent('€17,020');
+    expect(screen.getByTestId('price-cc-01')).toHaveTextContent('€17,940');
   });
 });
