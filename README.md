@@ -47,7 +47,7 @@ flowchart LR
 | Service | URL | Credentials / Notes |
 | :--- | :--- | :--- |
 | **Chrono-Cloud Storefront** | `http://localhost:8088` | Rootless NGINX + React SPA (`/healthz` for probes) |
-| **Jenkins CI/CD Server** | `http://localhost:8080` | Pipeline: `chrono-cloud-devsecops-pipeline` |
+| **Jenkins CI/CD Server** | `http://localhost:8090` | Pipeline: `chrono-cloud-devsecops-pipeline` |
 | **Grafana Dashboards** | `http://localhost:3005` | User: `admin` / Pass: `chrono-cloud-admin` |
 | **Prometheus UI** | `http://localhost:9090` | Scrapes `chrono-cloud-nginx` targets on `:9113` |
 
@@ -82,7 +82,7 @@ Add the generated `https://<subdomain>.trycloudflare.com/github-webhook/` URL un
 ### 5. Manual Terraform Deployment (Optional)
 ```powershell
 docker build -t chrono-cloud:local .
-docker save chrono-cloud:local | docker exec -i desktop-control-plane ctr --namespace=k8s.io images import -
+cmd /c "docker save chrono-cloud:local | docker exec -i desktop-control-plane ctr --namespace=k8s.io images import -"
 terraform -chdir=terraform init
 terraform -chdir=terraform apply -auto-approve -var="image_tag=local"
 ```

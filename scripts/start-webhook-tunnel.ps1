@@ -1,6 +1,6 @@
 <#
 .SYNOPSIS
-    Starts a free Cloudflare Quick Tunnel exposing local Jenkins (port 8080)
+    Starts a free Cloudflare Quick Tunnel exposing local Jenkins (port 8090)
     so GitHub Webhooks can trigger automated post-merge deployments.
 #>
 
@@ -11,10 +11,10 @@ if (-not (Get-Command cloudflared -ErrorAction SilentlyContinue)) {
 }
 
 Write-Host ""
-Write-Host "Starting Cloudflare Tunnel to http://localhost:8080 ..." -ForegroundColor Green
+Write-Host "Starting Cloudflare Tunnel to http://localhost:8090 ..." -ForegroundColor Green
 Write-Host "Copy the https://<random>.trycloudflare.com URL below and set your GitHub Webhook Payload URL to:" -ForegroundColor Yellow
 Write-Host "  https://<random>.trycloudflare.com/github-webhook/" -ForegroundColor White
 Write-Host "Content type: application/json | Events: Just the push event" -ForegroundColor Gray
 Write-Host ""
 
-cloudflared tunnel --url http://localhost:8080
+cloudflared tunnel --url http://localhost:8090
