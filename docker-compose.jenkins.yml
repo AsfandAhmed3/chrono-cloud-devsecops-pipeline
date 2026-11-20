@@ -1,0 +1,29 @@
+services:
+  jenkins:
+    build:
+      context: ./jenkins
+      dockerfile: Dockerfile
+    container_name: chrono-cloud-jenkins
+    user: root
+    restart: unless-stopped
+    ports:
+      - "8080:8080"
+      - "50000:50000"
+    env_file:
+      - .env.jenkins.local
+    environment:
+      - KUBECONFIG=/var/jenkins_home/.kube/config
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ./:/workspace
+      - ${USERPROFILE}/.kube/config:/root/.kube/config-host:ro
+      - jenkins_data:/var/jenkins_home
+    networks:
+      - kind
+
+volumes:
+  jenkins_data:
+
+networks:
+  kind:
+    external: true

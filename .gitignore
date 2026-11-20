@@ -1,0 +1,31 @@
+# Dependencies & build output
+node_modules/
+build/
+dist/
+coverage/
+.vite/
+
+# Terraform state & providers
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfvars
+!*.tfvars.example
+.terraform.lock.hcl
+
+# Secrets & local environment files (NEVER commit)
+.env
+.env.*
+!.env.jenkins.example
+
+# Security reports & local Jenkins state
+trivy-report*
+sbom*.json
+jenkins_home/
+
+# OS / IDE noise
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.log

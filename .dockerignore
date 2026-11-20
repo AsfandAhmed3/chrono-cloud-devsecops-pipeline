@@ -1,0 +1,16 @@
+node_modules
+build
+dist
+coverage
+.git
+.github
+terraform
+jenkins
+scripts
+.env
+.env.*
+*.md
+trivy-report*
+sbom*.json
+docker-compose*.yml
+Jenkinsfile

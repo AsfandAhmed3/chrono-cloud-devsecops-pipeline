@@ -1,0 +1,178 @@
+[
+  {
+    "id": "cc-01",
+    "name": "Aethelgard Sovereign Chronograph",
+    "collection": "Chronograph",
+    "reference": "REF. CC-8810-TI",
+    "price": 18500,
+    "movement": "Caliber CC-92 Automatic Column-Wheel",
+    "powerReserve": "72 Hours",
+    "waterResistance": "100m / 10 ATM",
+    "caseMaterial": "Grade 5 Brushed Titanium",
+    "dialColor": "Obsidian Sunray",
+    "diameter": "41 mm",
+    "stock": "In Vault",
+    "badge": "Flagship",
+    "description": "High-frequency 5Hz column-wheel chronograph engineered with a silicon escapement and sapphire exhibition caseback.",
+    "theme": {
+      "bezel": "#c8a96a",
+      "dial": "#101319",
+      "accent": "#d4b475",
+      "hands": "#f3e5c0"
+    }
+  },
+  {
+    "id": "cc-02",
+    "name": "Abyssal Pelagos 600M",
+    "collection": "Diver",
+    "reference": "REF. CC-4420-CR",
+    "price": 12900,
+    "movement": "Caliber CC-44 COSC Chronometer",
+    "powerReserve": "70 Hours",
+    "waterResistance": "600m / 60 ATM",
+    "caseMaterial": "Forged Carbon & Ceramic",
+    "dialColor": "Deep Trench Cobalt",
+    "diameter": "42 mm",
+    "stock": "In Vault",
+    "badge": "ISO 6425",
+    "description": "Saturation-ready dive instrument featuring a helium escape valve, unidirectional ceramic bezel, and Super-LumiNova BGW9 indices.",
+    "theme": {
+      "bezel": "#3b82f6",
+      "dial": "#091526",
+      "accent": "#60a5fa",
+      "hands": "#e0f2fe"
+    }
+  },
+  {
+    "id": "cc-03",
+    "name": "Celestial Tourbillon Noir",
+    "collection": "Tourbillon",
+    "reference": "REF. CC-9901-RG",
+    "price": 64000,
+    "movement": "Caliber CC-01 Flying Tourbillon",
+    "powerReserve": "96 Hours",
+    "waterResistance": "50m / 5 ATM",
+    "caseMaterial": "18k Rose Gold & Sapphire",
+    "dialColor": "Skeletonized Anthracite",
+    "diameter": "40 mm",
+    "stock": "Limited (2)",
+    "badge": "Haute Horlogerie",
+    "description": "Hand-beveled twin-barrel flying tourbillon making one rotation every 60 seconds, regulated across six chronometric positions.",
+    "theme": {
+      "bezel": "#d99b78",
+      "dial": "#161113",
+      "accent": "#f0b695",
+      "hands": "#fde8d7"
+    }
+  },
+  {
+    "id": "cc-04",
+    "name": "Meridian Stratos GMT",
+    "collection": "GMT / Aviation",
+    "reference": "REF. CC-5120-SS",
+    "price": 11400,
+    "movement": "Caliber CC-55 True Flyer GMT",
+    "powerReserve": "68 Hours",
+    "waterResistance": "150m / 15 ATM",
+    "caseMaterial": "904L Stainless Steel",
+    "dialColor": "Slate Polar Dual-Tone",
+    "diameter": "40.5 mm",
+    "stock": "In Vault",
+    "badge": "Dual Timezone",
+    "description": "Independent jumping local hour hand paired with a 24-hour bi-color ceramic bezel built for intercontinental flight crews.",
+    "theme": {
+      "bezel": "#b45309",
+      "dial": "#151922",
+      "accent": "#fbbf24",
+      "hands": "#f8fafc"
+    }
+  },
+  {
+    "id": "cc-05",
+    "name": "Geneve Ultra-Thin Perpetuelle",
+    "collection": "Dress",
+    "reference": "REF. CC-2100-PT",
+    "price": 24800,
+    "movement": "Caliber CC-18 Micro-Rotor",
+    "powerReserve": "60 Hours",
+    "waterResistance": "30m / 3 ATM",
+    "caseMaterial": "950 Platinum",
+    "dialColor": "Ivory Guilloche",
+    "diameter": "38.5 mm",
+    "stock": "In Vault",
+    "badge": "Ultra-Thin 6.2mm",
+    "description": "Engine-turned barleycorn dial housed in a 6.2mm platinum profile powered by an 18k solid gold peripheral micro-rotor.",
+    "theme": {
+      "bezel": "#cbd5e1",
+      "dial": "#27272a",
+      "accent": "#e2e8f0",
+      "hands": "#d4b475"
+    }
+  },
+  {
+    "id": "cc-06",
+    "name": "Valkyrie Split-Seconds Monopusher",
+    "collection": "Chronograph",
+    "reference": "REF. CC-7740-BK",
+    "price": 29500,
+    "movement": "Caliber CC-97 Rattrapante",
+    "powerReserve": "65 Hours",
+    "waterResistance": "100m / 10 ATM",
+    "caseMaterial": "DLC Microblasted Steel",
+    "dialColor": "Matte Carbon Black",
+    "diameter": "41.5 mm",
+    "stock": "Allocation Only",
+    "badge": "Rattrapante",
+    "description": "Split-seconds lap-timing chronograph featuring twin overlapping sweep hands and a tachymetric sapphire ring.",
+    "theme": {
+      "bezel": "#ef4444",
+      "dial": "#0f0f12",
+      "accent": "#f87171",
+      "hands": "#f1f5f9"
+    }
+  },
+  {
+    "id": "cc-07",
+    "name": "Nautilus Bathyscaphe Titanium",
+    "collection": "Diver",
+    "reference": "REF. CC-3390-TI",
+    "price": 14600,
+    "movement": "Caliber CC-49 Anti-Magnetic",
+    "powerReserve": "72 Hours",
+    "waterResistance": "300m / 30 ATM",
+    "caseMaterial": "Grade 2 Titanium",
+    "dialColor": "Emerald Abyss",
+    "diameter": "40 mm",
+    "stock": "In Vault",
+    "badge": "15,000 Gauss",
+    "description": "Faraday-shielded marine chronometer tested to 15,000 Gauss magnetic resistance with quick-adjust titanium deployant clasp.",
+    "theme": {
+      "bezel": "#10b981",
+      "dial": "#081c18",
+      "accent": "#34d399",
+      "hands": "#ecfdf5"
+    }
+  },
+  {
+    "id": "cc-08",
+    "name": "Solstice Moonphase Regulator",
+    "collection": "Dress",
+    "reference": "REF. CC-6040-WG",
+    "price": 32400,
+    "movement": "Caliber CC-62 Astronomical",
+    "powerReserve": "80 Hours",
+    "waterResistance": "50m / 5 ATM",
+    "caseMaterial": "18k White Gold",
+    "dialColor": "Midnight Aventurine",
+    "diameter": "39 mm",
+    "stock": "Limited (4)",
+    "badge": "122-Yr Precision",
+    "description": "Precision astronomical moonphase accurate to one day in 122 years set against hand-polished copper-flecked aventurine glass.",
+    "theme": {
+      "bezel": "#94a3b8",
+      "dial": "#0f172a",
+      "accent": "#c8a96a",
+      "hands": "#f8fafc"
+    }
+  }
+]
