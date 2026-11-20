@@ -30,7 +30,7 @@ services:
     command:
       - sh
       - -c
-      - npx --yes smee-client --url "$${SMEE_URL}" --target http://chrono-cloud-jenkins:8080/github-webhook/
+      - npx --yes smee-client --url "$${SMEE_URL}" --target "http://chrono-cloud-jenkins:8080/github-webhook/?source=smee"
     depends_on:
       - jenkins
     networks:
