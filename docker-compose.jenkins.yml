@@ -21,6 +21,21 @@ services:
     networks:
       - kind
 
+  smee:
+    image: node:20-alpine
+    container_name: chrono-cloud-webhook-relay
+    restart: unless-stopped
+    env_file:
+      - .env.jenkins.local
+    command:
+      - sh
+      - -c
+      - npx --yes smee-client --url "$${SMEE_URL}" --target http://chrono-cloud-jenkins:8080/github-webhook/
+    depends_on:
+      - jenkins
+    networks:
+      - kind
+
 volumes:
   jenkins_data:
 

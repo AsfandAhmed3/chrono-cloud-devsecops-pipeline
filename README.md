@@ -68,16 +68,17 @@ npm test
 npm run build
 ```
 
-### 3. Start Local Jenkins Stack
+### 3. Start Local Jenkins & GitHub Webhook Relay
 ```powershell
 docker compose -f docker-compose.jenkins.yml up -d --build
 ```
+*(Starts Jenkins at `http://localhost:8090` plus the `chrono-cloud-webhook-relay` Smee.io sidecar forwarding GitHub push events directly to `/github-webhook/` inside Docker).*
 
-### 4. Expose Local Jenkins to GitHub Webhooks (Free Tunnel)
+### 4. Sync GitHub Webhook Automatically (One-Time Setup)
 ```powershell
-.\scripts\start-webhook-tunnel.ps1
+powershell -ExecutionPolicy Bypass -File .\scripts\start-webhook-tunnel.ps1
 ```
-Add the generated `https://<subdomain>.trycloudflare.com/github-webhook/` URL under **GitHub Repo → Settings → Webhooks**.
+*(Automatically configures **GitHub Repo → Settings → Webhooks** to forward `push` events through your `SMEE_URL` channel in `.env.jenkins.local` to local Jenkins).*
 
 ### 5. Manual Terraform Deployment (Optional)
 ```powershell
