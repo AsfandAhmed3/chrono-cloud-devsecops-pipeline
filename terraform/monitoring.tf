@@ -96,9 +96,8 @@ resource "helm_release" "kube_prometheus_stack" {
 
       prometheus = {
         service = {
-          type     = "LoadBalancer"
-          port     = 9090
-          nodePort = 30090
+          type = "ClusterIP"
+          port = 9090
         }
         prometheusSpec = {
           retention = "2d"
@@ -171,11 +170,11 @@ resource "helm_release" "kube_prometheus_stack" {
         resources = {
           requests = {
             cpu    = "50m"
-            memory = "128Mi"
+            memory = "192Mi"
           }
           limits = {
-            cpu    = "250m"
-            memory = "256Mi"
+            cpu    = "500m"
+            memory = "512Mi"
           }
         }
         sidecar = {
@@ -192,5 +191,35 @@ resource "helm_release" "kube_prometheus_stack" {
 
   depends_on = [
     kubernetes_config_map.chrono_cloud_dashboard
+  ]
+}
+
+resource "kubernetes_service" "prometheus_lb" {
+  count = var.enable_monitoring ? 1 : 0
+
+  metadata {
+    name      = "chrono-cloud-prometheus-lb"
+    namespace = kubernetes_namespace.monitoring[0].metadata[0].name
+  }
+
+  spec {
+    type = "LoadBalancer"
+
+    selector = {
+      "app.kubernetes.io/name"      = "prometheus"
+      "operator.prometheus.io/name" = "monitoring-prometheus"
+    }
+
+    port {
+      name        = "http-web"
+      port        = 9090
+      target_port = 9090
+      node_port   = 30090
+      protocol    = "TCP"
+    }
+  }
+
+  depends_on = [
+    helm_release.kube_prometheus_stack
   ]
 }
